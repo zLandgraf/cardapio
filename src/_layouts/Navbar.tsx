@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Button } from '@mui/material';
+import { Link } from '@tanstack/react-location';
 
 export default function Navbar() {
   return (
@@ -23,8 +24,12 @@ export default function Navbar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Meu cardápio
           </Typography>
-          <Button>Todas Receitas</Button>
-          <Button>Nova Receita</Button>
+          <Link to="/receitas/todas">
+            <Button>Todas Receitas</Button>
+          </Link>
+          <Link to="/receitas/nova">
+            <Button>Nova Receita</Button>
+          </Link>
         </Toolbar>
       </AppBar>
     </Box>
