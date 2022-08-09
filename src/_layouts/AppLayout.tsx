@@ -1,4 +1,6 @@
-import { createTheme, CssBaseline, ThemeProvider } from '@mui/material';
+import {
+  Container, createTheme, CssBaseline, ThemeProvider,
+} from '@mui/material';
 import { Outlet } from '@tanstack/react-location';
 import Navbar from './Navbar';
 
@@ -12,7 +14,9 @@ const AppLayout = () => (
   <ThemeProvider theme={darkTheme}>
     <CssBaseline />
     <Navbar />
-    <Outlet />
+    <Container maxWidth="xl">
+      <Outlet />
+    </Container>
   </ThemeProvider>
 );
 

@@ -1,17 +1,13 @@
 import { Navigate, Route } from '@tanstack/react-location';
-import NovaReceitaPage from './nova/page';
 import TodasReceitasPage from './todas/page';
 
 const ReceitasRoutes: Route[] = [
   {
+    path: 'receitas',
     children: [
       {
         path: 'todas',
         element: <TodasReceitasPage />,
-      },
-      {
-        path: 'nova',
-        element: <NovaReceitaPage />,
       },
       {
         element: <Navigate to="todas" />,

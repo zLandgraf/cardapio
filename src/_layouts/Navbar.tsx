@@ -1,16 +1,15 @@
 import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Button } from '@mui/material';
+import { Button, Container } from '@mui/material';
 import { Link } from '@tanstack/react-location';
 
 export default function Navbar() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+    <AppBar position="static">
+      <Container maxWidth="xl">
         <Toolbar>
           <IconButton
             size="large"
@@ -22,7 +21,7 @@ export default function Navbar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Meu cardápio
+            I&apos;m Hungry
           </Typography>
           <Link to="/receitas/todas">
             <Button>Todas Receitas</Button>
@@ -31,7 +30,8 @@ export default function Navbar() {
             <Button>Nova Receita</Button>
           </Link>
         </Toolbar>
-      </AppBar>
-    </Box>
+      </Container>
+    </AppBar>
+
   );
 }
