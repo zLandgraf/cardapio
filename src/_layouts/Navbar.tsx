@@ -2,13 +2,13 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+import LunchDiningIcon from '@mui/icons-material/LunchDining';
 import { Container } from '@mui/material';
 
 export default function Navbar() {
   return (
     <AppBar position="static">
-      <Container maxWidth="lg" sx={{ px: '0!important' }}>
+      <Container maxWidth="xl" sx={{ px: '0!important' }}>
         <Toolbar>
           <IconButton
             size="large"
@@ -17,7 +17,7 @@ export default function Navbar() {
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            <MenuIcon />
+            <LunchDiningIcon sx={{ fontSize: '2rem' }} />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             I&apos;m Hungry

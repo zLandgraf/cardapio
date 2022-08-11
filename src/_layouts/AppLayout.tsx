@@ -17,7 +17,7 @@ const AppLayout = () => (
   <ThemeProvider theme={darkTheme}>
     <CssBaseline />
     <Navbar />
-    <Container maxWidth="lg" sx={{ py: 6 }}>
+    <Container maxWidth="xl" sx={{ py: 6 }}>
       <Outlet />
     </Container>
   </ThemeProvider>
