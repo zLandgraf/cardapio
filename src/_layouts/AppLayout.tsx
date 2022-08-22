@@ -9,7 +9,7 @@ import Navbar from './Navbar';
 
 const darkTheme = createTheme({
   palette: {
-    mode: 'dark',
+    // mode: 'dark',
   },
 });
 

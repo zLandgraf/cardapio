@@ -14,8 +14,13 @@ import {
   CardContent,
   Box,
   Button,
+  Card,
+  CardActions,
+  Chip,
 } from '@mui/material';
 import PrintIcon from '@mui/icons-material/Print';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import MealImg from '../assets/meal_002.png';
 
 const MenuPage = () => (
@@ -29,16 +34,16 @@ const MenuPage = () => (
             </Typography>
           </Grid>
           <Grid item>
-            <Button>Alterar cardápio</Button>
+            <Button>Novo Cardápio</Button>
           </Grid>
         </Grid>
-        <Grid container spacing={2} rowSpacing={3} pt={4}>
+        <Grid container spacing={3} rowSpacing={4} pt={4}>
           {[1, 2, 3, 4, 5, 6, 7].map((n) => (
-            <Grid item xs={6}>
-              <Box sx={{ display: 'flex', borderRadius: '.75rem' }}>
+            <Grid item xs={4} key={n}>
+              <Card>
                 <CardMedia
                   component="img"
-                  sx={{ width: 125, height: 'auto', borderRadius: '.75rem' }}
+                  sx={{ width: '100%', height: 'auto', borderRadius: '.75rem' }}
                   image={MealImg}
                 />
                 <CardContent sx={{ width: '100%' }}>
@@ -49,19 +54,32 @@ const MenuPage = () => (
                     justifyContent: 'space-between',
                   }}
                   >
-                    <Box>
-                      <Typography variant="h6">
-                        Nome da Receita
-                      </Typography>
+                    <Box sx={{
+                      py: 1, display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+                    }}
+                    >
+                      <Box>
+                        <Typography variant="h6">
+                          Receita
+                        </Typography>
+                      </Box>
+                      <Box sx={{ py: 1, display: 'flex', justifyContent: 'flex-end' }}>
+                        <Chip avatar={<AccessTimeIcon fontSize="inherit" />} label="30m" sx={{ mr: 1, fontSize: '.75rem' }} />
+                        <Chip avatar={<PeopleAltIcon />} label="2" sx={{ fontSize: '.75rem' }} />
+                      </Box>
                     </Box>
-                    <Box>
+                    <Box sx={{ pt: 2, pb: 1 }}>
                       <Typography>
-                        Info da receita
+                        Nome da receita que pode ser bem grande.
                       </Typography>
                     </Box>
                   </Box>
                 </CardContent>
-              </Box>
+                <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+                  <Button color="secondary">Remover</Button>
+                  <Button>Substituir</Button>
+                </CardActions>
+              </Card>
             </Grid>
           ))}
         </Grid>
