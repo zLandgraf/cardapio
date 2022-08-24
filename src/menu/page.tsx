@@ -21,6 +21,7 @@ import {
 import PrintIcon from '@mui/icons-material/Print';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
+import { Link } from '@tanstack/react-location';
 import MealImg from '../assets/meal_002.png';
 
 const MenuPage = () => (
@@ -34,7 +35,9 @@ const MenuPage = () => (
             </Typography>
           </Grid>
           <Grid item>
-            <Button>Novo Cardápio</Button>
+            <Link to="/receitas">
+              <Button>Novo Cardápio</Button>
+            </Link>
           </Grid>
         </Grid>
         <Grid container spacing={3} rowSpacing={4} pt={4}>
@@ -77,7 +80,6 @@ const MenuPage = () => (
                 </CardContent>
                 <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
                   <Button color="secondary">Remover</Button>
-                  <Button>Substituir</Button>
                 </CardActions>
               </Card>
             </Grid>
